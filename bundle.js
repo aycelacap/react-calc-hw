@@ -165,10 +165,61 @@ function (_React$Component) {
     value: function setNum1(e) {// 
     }
   }, {
+    key: "add",
+    value: function add(e) {
+      e.preventDefault();
+      this.setState({
+        'result': parseInt(this.state.num1) + parseInt(this.state.num2)
+      });
+    }
+  }, {
+    key: "subtract",
+    value: function subtract(e) {
+      e.preventDefault();
+      this.setState({
+        'result': parseInt(this.state.num1) - parseInt(this.state.num2)
+      });
+    }
+  }, {
+    key: "multiply",
+    value: function multiply(e) {
+      e.preventDefault();
+      this.setState({
+        'result': parseInt(this.state.num1) * parseInt(this.state.num2)
+      });
+    }
+  }, {
+    key: "divide",
+    value: function divide(e) {
+      e.preventDefault();
+      this.setState({
+        'result': parseInt(this.state.num1) / parseInt(this.state.num2)
+      });
+    }
+  }, {
+    key: "clear",
+    value: function clear(e) {
+      e.preventDefault();
+      this.setState({
+        'num1': '',
+        'num2': ''
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.state.result), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         value: this.state.num1
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.add
+      }, "+"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.subtract
+      }, "-"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.multiply
+      }, "X"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.divide
+      }, "BIG MIKE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        value: this.state.num2
       }));
     }
   }]);
