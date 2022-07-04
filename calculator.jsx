@@ -3,16 +3,25 @@ import React from 'react';
 class Calculator extends React.Component{
   constructor(props){
     super(props);
-    //your code here
+    this.state = {
+      num1: "",
+      num2: "",
+      result: 0
+    }
+    
+    this.setNum1 = this.setNum1.bind(this);
   }
 
-  //your code here
+  setNum1(e) {
+    // 
+  }
 
   render(){
     return (
       <div>
-        <h1>Hello World</h1>
-        //your code will replace this
+        <h1>{this.state.result}</h1>
+        <input value={this.state.num1}>
+        </input>
       </div>
     );
   }
